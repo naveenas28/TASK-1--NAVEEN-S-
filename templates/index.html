@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Custom AI Chatbot</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+</head>
+
+<body>
+
+    <div class="chat-container">
+
+        <header class="chat-header">
+            <h1>🤖 Custom AI Chatbot</h1>
+            <p>AI Chatbot with Conversation Memory</p>
+        </header>
+
+        <main id="chat-box" class="chat-box">
+
+            <div class="message bot-message">
+                <div class="message-label">AI</div>
+                <div class="message-text">
+                    Hello! 👋 I am your AI chatbot.
+                    I can remember our conversation during this session.
+                </div>
+            </div>
+
+        </main>
+
+        <div class="typing-area">
+
+            <textarea
+                id="message-input"
+                placeholder="Type your message..."
+                rows="1"
+            ></textarea>
+
+            <button
+                id="send-button"
+                type="button"
+            >
+                Send
+            </button>
+
+        </div>
+
+        <div class="controls">
+
+            <button
+                id="clear-button"
+                type="button"
+            >
+                🗑️ Clear Conversation
+            </button>
+
+            <span id="memory-status">
+                Memory: 0 messages
+            </span>
+
+        </div>
+
+    </div>
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+
+</body>
+</html>
